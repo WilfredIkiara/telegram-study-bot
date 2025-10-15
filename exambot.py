@@ -150,7 +150,7 @@ async def send_scheduled_message(application):
         
         # Use minute-based rotation for consistency
         current_minute = datetime.now().minute
-        message_index = (current_minute // 30) % len(messages)
+        message_index = (current_minute // 10) % len(messages)
         
         message = messages[message_index]
         await application.bot.send_message(
